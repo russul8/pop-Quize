@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100px;
+    background: #007bff;
+    padding: 25px 30px 20px 30px
+}
+
+.qoiz-box {
+    width: 500px;
+    padding: 25px 30px 20px 30px;
+    margin: 50px;
+    min-height: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px;
+    background-color: #8bb9de;
+}
+
+.header {
+    background-color: black;
+    color: seashell;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    margin: -30px -30px 30px;
+    border-radius: 5px 5px 0 0;
+    font-size: 15px;
+    font-weight: 500;
+    align-items: center;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.set.active {
+    display: block;
+}
+
+.set.active h3 {
+    margin: 0 0 15px;
+    font-size: 20px;
+}
+
+.option {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.option input {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.option span {
+    display: block;
+    padding: 8px 15px;
+    background: aliceblue;
+    border: 1px solid #84c5fe;
+    border-radius: 15px;
+    transition: all0.3s ease-out;
+}
+
+.option:hover span {
+    color: #004085;
+    background-color: #cce5ff;
+}
+
+.option input:checked+span {
+    background-color: red;
+    color: honeydew;
+}
+
+.option input[valid]:checked+span {
+    background-color: rgb(77, 201, 77);
+    color: honeydew;
+}
+
+.option input[valid]:checked+span::after {
+    content: '✓';
+}
+
+.option input:checked+span::after {
+    content: '✖';
+}
